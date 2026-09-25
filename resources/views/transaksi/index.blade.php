@@ -48,7 +48,7 @@
                 <tbody>
                     @forelse ($transaksis as $transaksi)
                         <tr>
-                            <td>{{ $transaksi->id }}</td>
+                            <td>{{ $transaksis->firstItem() + $loop->index }}</td>
                             <td>{{ $transaksi->tanggal->format('d/m/Y H:i') }}</td>
                             <td class="text-center">{{ $transaksi->detailTransaksis->count() }} item</td>
                             <td class="text-end harga"><strong>Rp {{ number_format($transaksi->total_bayar, 0, ',', '.') }}</strong></td>
@@ -65,6 +65,6 @@
             </table>
         </div>
 
-        <div class="mt-3">{{ $transaksis->links() }}</div>
+        <div class="mt-3">{{ $transaksis->links('pagination::bootstrap-5') }}</div>
     </div>
 @endsection
