@@ -24,6 +24,7 @@ Pada saat transaksi disimpan, sistem melakukan validasi terhadap:
 - Ketersediaan stok.
 
 Sistem juga menggunakan **database transaction** sehingga apabila terjadi kesalahan saat proses penyimpanan transaksi, perubahan data dapat dibatalkan menggunakan mekanisme **rollback**.
+//rollback= membatalkan semua perubahan yang sempat dilakukan sebelum error
 
 ### Teknologi yang Digunakan
 

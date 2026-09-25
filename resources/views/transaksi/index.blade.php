@@ -38,7 +38,7 @@
             <table class="table table-hover align-middle mb-0">
                 <thead class="table-light">
                     <tr>
-                        <th>#</th>
+                        <th>No</th>
                         <th>Tanggal</th>
                         <th class="text-center">Jumlah Item</th>
                         <th class="text-end">Total Bayar (Rp)</th>
@@ -48,7 +48,7 @@
                 <tbody>
                     @forelse ($transaksis as $transaksi)
                         <tr>
-                            <td>#{{ $transaksi->id }}</td>
+                            <td>{{ $transaksi->id }}</td>
                             <td>{{ $transaksi->tanggal->format('d/m/Y H:i') }}</td>
                             <td class="text-center">{{ $transaksi->detailTransaksis->count() }} item</td>
                             <td class="text-end harga"><strong>Rp {{ number_format($transaksi->total_bayar, 0, ',', '.') }}</strong></td>

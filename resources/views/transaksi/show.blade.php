@@ -9,7 +9,7 @@
             <div class="card p-4">
                 <div class="d-flex justify-content-between align-items-start mb-3">
                     <div>
-                        <h4 class="mb-1">Struk Transaksi #{{ $transaksi->id }}</h4>
+                        <h4 class="mb-1">Struk Transaksi {{ $transaksi->id }}</h4>
                         <span class="text-muted">{{ $transaksi->tanggal->format('d/m/Y H:i:s') }}</span>
                     </div>
                     <a href="{{ route('transaksi.index') }}" class="btn btn-outline-secondary btn-sm">&larr; Kembali</a>
